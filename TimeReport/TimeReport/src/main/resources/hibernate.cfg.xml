@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MariaDB103Dialect</property>
+		<property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/timereport</property>
+		<property name="hibernate.connection.username">timereport</property>
+		<property name="hibernate.connection.password">timereport</property>
+<!-- 		<property name="show_sql">true</property> -->
+<!-- <property name="hibernate.hbm2ddl.auto">create</property>  -->
+		
+			<!-- mapping file -->
+		<mapping class="be.promsoc.arlon.entity.Employee" />
+		<mapping class="be.promsoc.arlon.entity.Project" />
+		<mapping class="be.promsoc.arlon.entity.Activity" />
+		<mapping class="be.promsoc.arlon.entity.Timesheet" />
+		
+	</session-factory>
+</hibernate-configuration>
